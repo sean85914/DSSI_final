@@ -1,0 +1,8 @@
+<launch>
+	<!-- joy -->
+	<include file="$(find project)/launch/joy_node.launch"/>
+	<!-- wheel odometry -->
+	<include file="$(find project)/launch/setup_serial.launch"/>
+	<!-- joy mapper -->
+	<include file="$(find project)/launch/joy_mapper_node.launch"/>
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+	<arg name="pkg_name" value="joy"/>
+	<arg name="node_name" default="joy_node"/>
+	<node pkg="$(arg pkg_name)" type="$(arg node_name)" name="$(arg node_name)" output="screen" clear_params="true" required="true"/>
+	</launch>
+
