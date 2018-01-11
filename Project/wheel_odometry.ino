@@ -1,4 +1,4 @@
-// Odometry by wheel, called after velocity_control
+// Odometry by wheel, called after each loop
 // Process time: 24ms
 void wheel_odometry()
 {
@@ -14,8 +14,14 @@ void wheel_odometry()
     y += (disR + disL) /2 * sin(theta + dtheta / 2.) / 100; // in meters
     theta += dtheta; // in radians
     // theta in range [0, 2pi)
-    if(theta<0) theta += 2*PI;
     if(theta>=2*PI) theta -= 2*PI;
+    if(theta<0) theta += 2*PI;
+    // theta in range [-pi, pi)
+    if(theta >= PI)
+    {
+      theta_comp = theta - 2*PI;
+    }
+    else theta_comp = theta;
     // encoder and time update
     encoderLPrior = encoderLPre;
     encoderRPrior = encoderRPre;

@@ -1,15 +1,19 @@
-// Show databy serial
+// Show data by serial
 void showData()
 {
-  //Serial.print(speedL);
-  //Serial.print(" ");
-  //Serial.println(millis());
-  //Serial.print(speedR);
-  //Serial.print(" ");
   Serial.print(x);
   Serial.print(" ");
   Serial.print(y);
   Serial.print(" ");
-  Serial.println(theta);
+  Serial.print(theta);
+  Serial.print(" ");
+  Serial.print(omega);
+  Serial.print(" ");
+  Serial.println(state);
+  /*Serial.print(speedLR);
+  Serial.print(" ");
+  Serial.print(omega);
+  Serial.print(" ");
+  Serial.println(millis());*/
 }
 

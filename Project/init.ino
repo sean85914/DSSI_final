@@ -7,6 +7,7 @@ void Init()
   pinMode(motorLIn2, OUTPUT);
   pinMode(motorRIn1, OUTPUT);
   pinMode(motorRIn2, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   // Declare interrupt
   attachInterrupt(0, EncoderL, RISING);
   attachInterrupt(2, EncoderR, RISING);
@@ -16,13 +17,6 @@ void Init()
   // Initial PWMs
   pwmL = 0;
   pwmR = 0;
-  // angular PI
-  // angle_KP = 20;
-  //angle_KI = 6;
-  // linear PI
-  //linear_KP = 1.5;
-  //linear_KI = 1;
-  // PI coefficients tuned by hand
   // Wheel odometry
   x = 0;
   y = 0;
@@ -30,6 +24,7 @@ void Init()
   
   // Begin Serial
   Serial.begin(9600);
+  BT.begin(38400);
   // Record the start time
   now = millis();
 }

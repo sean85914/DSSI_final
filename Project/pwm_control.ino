@@ -10,7 +10,7 @@ void pwm_control(int pwmL, int pwmR)
     analogWrite(motorLIn2, 0);
     analogWrite(motorRIn1, pwmR);
     analogWrite(motorRIn2, 0);
-    delay(10);
+    //delay(10);
   }
   else if(pwmL>0 && pwmR<0)
   {
@@ -18,7 +18,7 @@ void pwm_control(int pwmL, int pwmR)
     analogWrite(motorLIn2, 0);
     analogWrite(motorRIn1, 0);
     analogWrite(motorRIn2, -pwmR);
-    delay(10);
+    //delay(10);
   }
   else if(pwmL<0 && pwmR>0)
   {
@@ -26,7 +26,7 @@ void pwm_control(int pwmL, int pwmR)
     analogWrite(motorLIn2, -pwmL);
     analogWrite(motorRIn1, pwmR);
     analogWrite(motorRIn2, 0);
-    delay(10);
+    //delay(10);
   }
   else
   {
@@ -34,6 +34,6 @@ void pwm_control(int pwmL, int pwmR)
     analogWrite(motorLIn2, -pwmL);
     analogWrite(motorRIn1, 0);
     analogWrite(motorRIn2, -pwmR);
-    delay(10);
+    //delay(10);
   }
 }
